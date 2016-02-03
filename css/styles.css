@@ -6,8 +6,13 @@ body {
 	padding: 0;
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+}
+
 ul li {
-		list-style: none;
+	list-style: none;
 }
 
 .col-3  { box-sizing: border-box; float: left; width: 25%;  }
@@ -116,15 +121,17 @@ ul li {
 }
 
 .bottle img.fade {
-opacity: 0;
-transition: opacity 0.3s;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .swatch-panel {
 	position: fixed;
+	z-index: 3;
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	background: white;
 }
 
 .swatch-panel .panel {
@@ -139,50 +146,86 @@ transition: opacity 0.3s;
 }
 
 .box-thingy {
-	width: 300px;
-	height: 400px;
-	background: #eee;
 	position: absolute;
-	top: calc(50% - 200px);
-	right: 150px;
-	transition: right 0.9s;
-}
+	bottom: 68px;
+	left:0;
+	right:0;
 
-.box-thingy .box-close {
-float: right;
-font-weight: 700;
-font-size: 19px;
+	width: 100%;
+	height: auto;
+	background: #eee;
+	transition: bottom 0.9s;
+	border-radius: 3px;
+	border-top: 1px solid #ddd;
 }
 
 .box-thingy.collapse {
-	right: -100%;
-	transition: right 0.9s;
+	bottom: -100%;
+	transition: bottom 0.9s;
+}
+
+
+.box-thingy .title {
+	padding: 0.5em;
+	text-align: center;
+	background: #ddd;
+}
+
+.box-thingy .box-close {
+	float: right;
+	font-weight: 700;
+	font-size: 19px;
 }
 
 .box-thingy ul.box-content li {
-	width: 100%;
-	padding: 8px;
-	margin: 0;
+	text-align: center;
+	border: 1px solid #ddd;
+	padding: 0.5em 2em;
 }
 
 .box-thingy ul.box-content li img {
 	max-height: 50px;
+	display: inline-block;
 }
 
 .box-thingy ul.box-content div {
-	background: #fff;
-	width: 80px;
-	height: 50px;
-	text-align: center;
-	display: inline-block;
+	font-weight: 300;
 }
 
 .box-thingy ul.box-content p {
-	padding: 12px;
-	margin: 0px;
 	display: inline-block;
 }
+
+.box-thingy ul.box-content .swatch {
+	background: #ffffff;
+	width: 20px;
+	height: 40px;
+	float: left;
+}
+
+.box-thingy ul.box-content .swatch .black-sand    { background: #fff; }
+.box-thingy ul.box-content .swatch .blue-hawaii   { background: #fff; }
+.box-thingy ul.box-content .swatch .green-isle    { background: #fff; }
+.box-thingy ul.box-content .swatch .hibiscus-red  { background: #fff; }
+.box-thingy ul.box-content .swatch .paradise-pink { background: #fff;}
+.box-thingy ul.box-content .swatch .pink-orchid   { background: #fff;}
+.box-thingy ul.box-content .swatch .tiffany       { background: #fff;}
+.box-thingy ul.box-content .swatch .volt          { background: #fff;}
+.box-thingy ul.box-content .swatch .white-pekake  { background: #fff;}
 
 /*===================================
 ============= Utilities =============
 ===================================*/
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
