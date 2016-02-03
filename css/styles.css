@@ -157,6 +157,8 @@ ul li {
 	transition: bottom 0.9s;
 	border-radius: 3px;
 	border-top: 1px solid #ddd;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 
 .box-thingy.collapse {
@@ -197,21 +199,23 @@ ul li {
 }
 
 .box-thingy ul.box-content .swatch {
+
 	background: #ffffff;
-	width: 20px;
+	width: 77px;
 	height: 40px;
 	float: left;
+	border: none;
 }
 
-.box-thingy ul.box-content .swatch .black-sand    { background: #fff; }
-.box-thingy ul.box-content .swatch .blue-hawaii   { background: #fff; }
-.box-thingy ul.box-content .swatch .green-isle    { background: #fff; }
-.box-thingy ul.box-content .swatch .hibiscus-red  { background: #fff; }
-.box-thingy ul.box-content .swatch .paradise-pink { background: #fff;}
-.box-thingy ul.box-content .swatch .pink-orchid   { background: #fff;}
-.box-thingy ul.box-content .swatch .tiffany       { background: #fff;}
-.box-thingy ul.box-content .swatch .volt          { background: #fff;}
-.box-thingy ul.box-content .swatch .white-pekake  { background: #fff;}
+.box-thingy ul.box-content .swatch.black-sand    { background: #1C1E22; }
+.box-thingy ul.box-content .swatch.blue-hawaii   { background: #2C418F; }
+.box-thingy ul.box-content .swatch.green-isle    { background: #67C948; }
+.box-thingy ul.box-content .swatch.hibiscus-red  { background: #BF3648; }
+.box-thingy ul.box-content .swatch.paradise-pink { background: #CF3576; }
+.box-thingy ul.box-content .swatch.purple-orchid { background: #7E38A5; }
+.box-thingy ul.box-content .swatch.tiffany       { background: #78BDC3; }
+.box-thingy ul.box-content .swatch.volt          { background: #D9E15E; }
+.box-thingy ul.box-content .swatch.white-pekake  { background: #FFF; }
 
 /*===================================
 ============= Utilities =============
